@@ -9,16 +9,19 @@ Your task is to build a simple web-based tool that takes in an email (or multipl
 ### **Challenge Requirements:**
 
 1. **Web Interface:**
+
    - Build a web page where users can:
      - Paste an email (or batch of emails).
      - Click **Submit** to process the email(s).
      - See the output with template variables inserted.
 
 2. **Email Processing:**
+
    - Replace key details in the emails with predefined template variables (e.g., customer names, order numbers).
    - Ensure that the email formatting and structure are preserved after processing.
 
 3. **Handling Large Inputs:**
+
    - Your solution must handle long emails and multiple emails at once, maintaining performance and accuracy.
 
 4. **Template Variables:**
@@ -40,9 +43,12 @@ Your task is to build a simple web-based tool that takes in an email (or multipl
 
 ---
 
+<!-- Question about the differences in, items, products, product_name -->
+
 ### **Example Emails:**
 
 #### **1. Abandoned Cart Email:**
+
 ```plaintext
 Subject: Don't forget about your Archimedes Products order!
 Dear Yin Wu,
@@ -51,22 +57,23 @@ We noticed you left some items in your cart:
 - Table Cap, Quantity: 2
 - Token Distributor, Quantity: 1
 
-Best regards,  
+Best regards,
 The Archimedes Products Team
 ```
 
 #### **2. Order Confirmation Email:**
+
 ```plaintext
 Subject: Order Confirmation - Archimedes Products Order #O2024
 Dear Yin Wu,
 
-Thank you for your order!  
-Order Number: O2024  
-Items Ordered:  
-- Table Cap, Quantity: 2  
+Thank you for your order!
+Order Number: O2024
+Items Ordered:
+- Table Cap, Quantity: 2
 - Token Distributor, Quantity: 1
 
-Best regards,  
+Best regards,
 The Archimedes Products Team
 ```
 
@@ -75,9 +82,11 @@ The Archimedes Products Team
 ### **Getting Started:**
 
 1. **Fork the Replit Project:**
+
    - You can use any language or framework.
 
 2. **Build the Tool:**
+
    - Implement the ability to paste and process emails, replacing key details with template variables.
 
 3. **Submission:**
