@@ -143,7 +143,7 @@ export default function Home() {
   };
 
   return (
-    <div className="h-screen p-5">
+    <div className="min-h-screen p-5">
       <div className="grid grid-cols-2 gap-4 h-3/4">
         <Card className="flex flex-col h-full">
           <CardHeader className="flex-none">
@@ -169,9 +169,13 @@ export default function Home() {
           <CardHeader className="flex-none">
             <CardTitle>Output</CardTitle>
           </CardHeader>
-          <CardContent className="flex flex-grow overflow-scroll">
-            <div className="min-h-[calc(50vh)] max-h-[calc(50vh)]">
-              {outputSet && <pre>{updatedText}</pre>}
+          <CardContent className="flex">
+            <div className="h-full max-h-[calc(50vh)] text-wrap overflow-scroll">
+              {outputSet && (
+                <pre className="whitespace-pre-wrap break-words">
+                  {updatedText}
+                </pre>
+              )}
             </div>
           </CardContent>
           <CardFooter className="flex-none">
