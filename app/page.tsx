@@ -78,7 +78,7 @@ export default function Home() {
   }, [templateVariables]);
 
   // Always inputed as json
-  const processMappings2 = (mappings: any) => {
+  const processMappings = (mappings: any) => {
     let newText = text;
     mappings.forEach((pattern: any) => {
       if (
@@ -123,12 +123,11 @@ export default function Home() {
         },
         body: JSON.stringify({ emails: text, template: templateVariables }),
       });
-
       const data = await response.json();
       const parsedData = JSON.parse(data.responseContent);
 
       if (parsedData && parsedData.mappings) {
-        const processedText = processMappings2(parsedData.mappings);
+        const processedText = processMappings(parsedData.mappings);
         setNewText(processedText);
         setOutputSet(true);
       } else {
@@ -169,7 +168,7 @@ export default function Home() {
           <CardHeader className="flex-none">
             <CardTitle>Output</CardTitle>
           </CardHeader>
-          <CardContent className="flex">
+          <CardContent className="flex h-full">
             <div className="h-full max-h-[calc(50vh)] text-wrap overflow-scroll">
               {outputSet && (
                 <pre className="whitespace-pre-wrap break-words">
@@ -178,7 +177,7 @@ export default function Home() {
               )}
             </div>
           </CardContent>
-          <CardFooter className="flex-none">
+          <CardFooter className="flex">
             <Button onClick={handleCopy}>Copy</Button>
           </CardFooter>
         </Card>
